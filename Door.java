@@ -18,8 +18,7 @@ public class Door implements Runnable {
      * The method should create customers at random intervals and try to put them in the customerQueue
      */
     @Override
-    public void run() {
-        // TODO Implement required functionality    	
+    public void run() {	
     	while (SushiBar.isOpen) { // Checks to see if the shop is open
     		SushiBar.customerCounter.increment(); // SyncronizedInteger increments customerCounter
 			customer = new Customer();	// Creates a new customer
@@ -31,11 +30,6 @@ public class Door implements Runnable {
 				e.printStackTrace();
 			}
     	}
-    	waitingArea.close();
-    	SushiBar.write("***** NO MORE CUSTOMERS - THE SHOP IS CLOSED NOW. *****");
-    	SushiBar.write("Total served orders " + SushiBar.servedOrders.get());
-    	SushiBar.write("Total takeway orders " + SushiBar.takeawayOrders.get());
-    	SushiBar.write("Total orders " + SushiBar.totalOrders.get());
     }
 
     // Add more methods as you see fit

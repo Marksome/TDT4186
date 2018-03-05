@@ -1,0 +1,173 @@
+10:52:28, Door: Customer1 is now created.
+10:52:28, Waitress1 is now waiting.
+10:52:28, Door: Customer1 is now waiting.
+10:52:28, Waitress9 is now waiting.
+10:52:28, Waitress10: Customer1 is now fetched.
+10:52:28, Waitress8 is now waiting.
+10:52:28, Waitress7 is now waiting.
+10:52:28, Waitress6 is now waiting.
+10:52:28, Waitress5 is now waiting.
+10:52:28, Waitress4 is now waiting.
+10:52:28, Waitress3 is now waiting.
+10:52:28, Waitress2 is now waiting.
+10:52:28, Waitress1 is now waiting.
+10:52:28, Waitress10: Customer1 is now eating.
+10:52:28, Door: Customer2 is now created.
+10:52:28, Door: Customer2 is now waiting.
+10:52:28, Waitress9: Customer2 is now fetched.
+10:52:28, Waitress8 is now waiting.
+10:52:28, Waitress9: Customer2 is now eating.
+10:52:28, Door: Customer3 is now created.
+10:52:28, Door: Customer3 is now waiting.
+10:52:28, Waitress6 is now waiting.
+10:52:28, Waitress7: Customer3 is now fetched.
+10:52:28, Waitress7: Customer3 is now eating.
+10:52:28, Door: Customer4 is now created.
+10:52:28, Door: Customer4 is now waiting.
+10:52:28, Waitress5: Customer4 is now fetched.
+10:52:28, Waitress4 is now waiting.
+10:52:28, Waitress5: Customer4 is now eating.
+10:52:28, Door: Customer5 is now created.
+10:52:28, Door: Customer5 is now waiting.
+10:52:28, Waitress2 is now waiting.
+10:52:28, Waitress3: Customer5 is now fetched.
+10:52:28, Waitress3: Customer5 is now eating.
+10:52:29, Door: Customer6 is now created.
+10:52:29, Door: Customer6 is now waiting.
+10:52:29, Waitress8 is now waiting.
+10:52:29, Waitress1: Customer6 is now fetched.
+10:52:29, Waitress1: Customer6 is now eating.
+10:52:29, Door: Customer7 is now created.
+10:52:29, Door: Customer7 is now waiting.
+10:52:29, Waitress6: Customer7 is now fetched.
+10:52:29, Waitress4 is now waiting.
+10:52:29, Waitress6: Customer7 is now eating.
+10:52:29, Door: Customer8 is now created.
+10:52:29, Door: Customer8 is now waiting.
+10:52:29, Waitress2: Customer8 is now fetched.
+10:52:29, Waitress8 is now waiting.
+10:52:29, Waitress2: Customer8 is now eating.
+10:52:29, Door: Customer9 is now created.
+10:52:29, Door: Customer9 is now waiting.
+10:52:29, Waitress4: Customer9 is now fetched.
+10:52:29, Waitress8 is now waiting.
+10:52:29, Waitress4: Customer9 is now eating.
+10:52:29, Door: Customer10 is now created.
+10:52:29, Door: Customer10 is now waiting.
+10:52:29, Waitress8: Customer10 is now fetched.
+10:52:29, Waitress8: Customer10 is now eating.
+10:52:29, Door: Customer11 is now created.
+10:52:29, Door: Customer11 is now waiting.
+10:52:29, Door: Customer12 is now created.
+10:52:29, Door: Customer12 is now waiting.
+10:52:29, Door: Customer13 is now created.
+10:52:29, Door: Customer13 is now waiting.
+10:52:29, Door: Customer14 is now created.
+10:52:29, Door: Customer14 is now waiting.
+10:52:29, Door: Customer15 is now created.
+10:52:29, Door: Customer15 is now waiting.
+10:52:30, Door: Customer16 is now created.
+10:52:30, Door: Customer16 is now waiting.
+10:52:30, Door: Customer17 is now created.
+10:52:30, Door: Customer17 is now waiting.
+10:52:30, Door: Customer18 is now created.
+10:52:30, Door: Customer18 is now waiting.
+10:52:30, Door: Customer19 is now created.
+10:52:30, Door: Customer19 is now waiting.
+10:52:30, Door: Customer20 is now created.
+10:52:30, Door: Customer20 is now waiting.
+10:52:30, Door: Customer21 is now created.
+10:52:30, Door: Customer21 is now waiting.
+10:52:30, Door: Customer22 is now created.
+10:52:30, Door: Customer22 is now waiting.
+10:52:30, Door: Customer23 is now created.
+10:52:30, Door: Customer23 is now waiting.
+10:52:30, Door: Customer24 is now created.
+10:52:30, Door: Customer24 is now waiting.
+10:52:30, Door: Customer25 is now created.
+10:52:30, Door: Customer25 is now waiting.
+10:52:31, Door: Customer26 is now created.
+10:52:31, Door: Customer26 is now waiting.
+10:52:31, Door: Customer27 is now created.
+10:52:31, Door: Customer27 is now waiting.
+10:52:31, Door: Customer28 is now created.
+10:52:31, Door: Customer28 is now waiting.
+10:52:31, Door: Customer29 is now created.
+10:52:31, Door: Customer29 is now waiting.
+10:52:31, Door: Customer30 is now created.
+10:52:31, Door: Customer30 is now waiting.
+10:52:31, Waitress10: Customer1 is now leaving.
+10:52:31, Waitress10: Customer11 is now fetched.
+10:52:31, Waitress10: Customer11 is now eating.
+10:52:31, Waitress9: Customer2 is now leaving.
+10:52:31, Waitress9: Customer12 is now fetched.
+10:52:31, Waitress9: Customer12 is now eating.
+10:52:31, Waitress7: Customer3 is now leaving.
+10:52:31, Waitress7: Customer13 is now fetched.
+10:52:31, Waitress7: Customer13 is now eating.
+10:52:31, Waitress5: Customer4 is now leaving.
+10:52:31, Waitress5: Customer14 is now fetched.
+10:52:31, Waitress5: Customer14 is now eating.
+10:52:31, Waitress3: Customer5 is now leaving.
+10:52:31, Waitress3: Customer15 is now fetched.
+10:52:32, Waitress3: Customer15 is now eating.
+10:52:32, Waitress1: Customer6 is now leaving.
+10:52:32, Waitress1: Customer16 is now fetched.
+10:52:32, Waitress1: Customer16 is now eating.
+10:52:32, Waitress6: Customer7 is now leaving.
+10:52:32, Waitress6: Customer17 is now fetched.
+10:52:32, Waitress6: Customer17 is now eating.
+10:52:32, Waitress2: Customer8 is now leaving.
+10:52:32, Waitress2: Customer18 is now fetched.
+10:52:32, Waitress2: Customer18 is now eating.
+10:52:32, Waitress4: Customer9 is now leaving.
+10:52:32, Waitress4: Customer19 is now fetched.
+10:52:32, Waitress4: Customer19 is now eating.
+10:52:32, Waitress8: Customer10 is now leaving.
+10:52:32, Waitress8: Customer20 is now fetched.
+10:52:32, Waitress8: Customer20 is now eating.
+10:52:34, Waitress10: Customer11 is now leaving.
+10:52:34, Waitress10: Customer21 is now fetched.
+10:52:34, Waitress10: Customer21 is now eating.
+10:52:34, Waitress9: Customer12 is now leaving.
+10:52:34, Waitress9: Customer22 is now fetched.
+10:52:34, Waitress9: Customer22 is now eating.
+10:52:34, Waitress7: Customer13 is now leaving.
+10:52:34, Waitress7: Customer23 is now fetched.
+10:52:34, Waitress7: Customer23 is now eating.
+10:52:34, Waitress5: Customer14 is now leaving.
+10:52:34, Waitress5: Customer24 is now fetched.
+10:52:34, Waitress5: Customer24 is now eating.
+10:52:35, Waitress3: Customer15 is now leaving.
+10:52:35, Waitress3: Customer25 is now fetched.
+10:52:35, Waitress3: Customer25 is now eating.
+10:52:35, Waitress1: Customer16 is now leaving.
+10:52:35, Waitress1: Customer26 is now fetched.
+10:52:35, Waitress1: Customer26 is now eating.
+10:52:35, Waitress6: Customer17 is now leaving.
+10:52:35, Waitress6: Customer27 is now fetched.
+10:52:35, Waitress6: Customer27 is now eating.
+10:52:35, Waitress2: Customer18 is now leaving.
+10:52:35, Waitress2: Customer28 is now fetched.
+10:52:35, Waitress2: Customer28 is now eating.
+10:52:35, Waitress4: Customer19 is now leaving.
+10:52:35, Waitress4: Customer29 is now fetched.
+10:52:35, Waitress4: Customer29 is now eating.
+10:52:35, Waitress8: Customer20 is now leaving.
+10:52:35, Waitress8: Customer30 is now fetched.
+10:52:35, Waitress8: Customer30 is now eating.
+10:52:37, Waitress10: Customer21 is now leaving.
+10:52:37, Waitress9: Customer22 is now leaving.
+10:52:37, Waitress7: Customer23 is now leaving.
+10:52:37, Waitress5: Customer24 is now leaving.
+10:52:38, Waitress3: Customer25 is now leaving.
+10:52:38, Waitress1: Customer26 is now leaving.
+10:52:38, Waitress6: Customer27 is now leaving.
+10:52:38, Waitress2: Customer28 is now leaving.
+10:52:38, Waitress4: Customer29 is now leaving.
+10:52:38, Waitress8: Customer30 is now leaving.
+10:52:38, ***** NO MORE CUSTOMERS - THE SHOP IS CLOSED NOW. *****
+10:52:38, Total served orders 106
+10:52:38, Total takeway orders 65
+10:52:38, Total orders 171
+10:52:38, Total customers 30

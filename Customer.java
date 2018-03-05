@@ -15,7 +15,6 @@ public class Customer {
      *  Each customer should be given a unique ID
      */
     public Customer() {
-        // TODO Implement required functionality
     	this.customerID = SushiBar.customerCounter.get(); // Gets the customerCounter and sets it as customerID
     	this.random = new SecureRandom();
     }
@@ -25,7 +24,6 @@ public class Customer {
      * @throws InterruptedException 
      */
     public synchronized void order() {
-        // TODO Implement required functionality
     	customerOrders = random.nextInt(SushiBar.maxOrder) + 1; // SecureRandom from 1 to maxOrder
     	customerBarOrders = random.nextInt(customerOrders) + 1; // SecureRandom from 1 to customerOrders
     	customerTakeawayOrders = customerOrders - customerBarOrders; // Sets the rest of the orders as takeaway
@@ -39,7 +37,6 @@ public class Customer {
 			e.printStackTrace();
 		}
     	SushiBar.write(Thread.currentThread().getName() + ": Customer" + this.getCustomerID() + " is now leaving.");
-		SushiBar.customers.decrement(); // SyncronizedInteger decrements customers
     }
 
     /**
@@ -47,7 +44,6 @@ public class Customer {
      * @return Should return the customerID
      */
     public int getCustomerID() {
-        // TODO Implement required functionality
     	return this.customerID; // Returns the customerID
     }
 

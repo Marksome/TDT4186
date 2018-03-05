@@ -25,7 +25,6 @@ public class WaitingArea {
      * @param customer A customer created by Door, trying to enter the waiting area
      */
     public synchronized void enter(Customer customer) {
-        // TODO Implement required functionality
     	while (!roomInQueue()) { // Checks to see if there is no more room in the queue
     		try {
 				wait(); // Make the door wait until there is more room in the queue
@@ -34,7 +33,6 @@ public class WaitingArea {
 			}
     	}
     	queue.add(customer);
-    	SushiBar.customers.increment();
     	SushiBar.write(Thread.currentThread().getName() + ": Customer" + customer.getCustomerID() + " is now waiting.");
     	notify(); // Notifies the waitresses that there is a customer in queue
     }
@@ -43,7 +41,6 @@ public class WaitingArea {
      * @return The customer that is first in line.
      */
     public synchronized Customer next() {
-        // TODO Implement required functionality
     	while (emptyQueue()) {
     		try {
     	    	SushiBar.write(Thread.currentThread().getName() + " is now waiting.");
@@ -55,16 +52,8 @@ public class WaitingArea {
     	notify(); // Notifies the door that there is more room in the queue
         return queue.poll(); // Returns the first element of the LinkedList
     }
-    
-    public synchronized void close() {
-    	while (SushiBar.customers.get() > 0) { // Checks to see if the shop is empty
-    		try {
-    			wait(); // Makes the door wait until the shop is empty
-    		} catch (InterruptedException e) {
-    			e.printStackTrace();
-    		}
-    	}
-    }
+
+    // Add more methods as you see fit
     
     public boolean roomInQueue() {
     	return queue == null || waitingAreaCapacity > queue.size() ? true : false; // Checks if there is room in the queue
@@ -73,6 +62,4 @@ public class WaitingArea {
     public static boolean emptyQueue() {
     	return queue.size() == 0 ? true : false; // Checks if the queue is empty
     }
-
-    // Add more methods as you see fit
 }

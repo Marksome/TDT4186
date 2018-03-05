@@ -12,7 +12,6 @@ public class Waitress implements Runnable {
      * @param waitingArea The waiting area for customers
      */
     Waitress(WaitingArea waitingArea) {
-        // TODO Implement required functionality
     	this.waitingArea = waitingArea;
     }
 
@@ -22,11 +21,9 @@ public class Waitress implements Runnable {
      */
     @Override
     public void run() {
-        // TODO Implement required functionality
     	while (SushiBar.isOpen || !WaitingArea.emptyQueue()) {
     		customer = waitingArea.next(); // Fetch the next customer
     		SushiBar.write(Thread.currentThread().getName() + ": Customer" + customer.getCustomerID() + " is now fetched.");
-        	SushiBar.customers.increment(); // SyncronizedInteger increments customers
     		try {
 				Thread.sleep(SushiBar.waitressWait); // Makes the waitress sleep a set time before taking the customer's order
 			} catch (InterruptedException e) {
