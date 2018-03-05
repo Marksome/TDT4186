@@ -17,9 +17,6 @@ public class Customer {
     public Customer() {
         // TODO Implement required functionality
     	this.customerID = SushiBar.customerCounter.get(); // Gets the customerCounter and sets it as customerID
-    	this.customerOrders = customerOrders;
-    	this.customerBarOrders = customerBarOrders;
-    	this.customerTakeawayOrders = customerTakeawayOrders;
     	this.random = new SecureRandom();
     }
     
@@ -27,7 +24,7 @@ public class Customer {
      * Here you should implement the functionality for ordering food as described in the assignment.
      * @throws InterruptedException 
      */
-    public synchronized void order(){
+    public synchronized void order() {
         // TODO Implement required functionality
     	customerOrders = random.nextInt(SushiBar.maxOrder) + 1; // SecureRandom from 1 to maxOrder
     	customerBarOrders = random.nextInt(customerOrders) + 1; // SecureRandom from 1 to customerOrders
@@ -35,19 +32,14 @@ public class Customer {
     	SushiBar.servedOrders.add(customerBarOrders);
     	SushiBar.takeawayOrders.add(customerTakeawayOrders);
     	SushiBar.totalOrders.add(customerOrders);
-    	SushiBar.write("Customer" + this.getCustomerID() + " is now eating.");
-    	try {
-    		Thread.sleep(SushiBar.customerWait)); // Makes the customer sleep for a set time
+    	SushiBar.write(Thread.currentThread().getName() + ": Customer" + this.getCustomerID() + " is now eating.");
+		try {
+			Thread.sleep(SushiBar.customerWait); // Makes the customer sleep for a set time
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-    	// Thread.currentThread().notify(); // Notify producer/consumer threads.
-    	SushiBar.write("Customer" + this.getCustomerID() + " is now leaving.");
-    	
-
-//        totalOrders = new SynchronizedInteger(0);
-//        servedOrders = new SynchronizedInteger(0);
-//        takeawayOrders = new SynchronizedInteger(0);
+    	SushiBar.write(Thread.currentThread().getName() + ": Customer" + this.getCustomerID() + " is now leaving.");
+		SushiBar.customers.decrement(); // SyncronizedInteger decrements customers
     }
 
     /**
@@ -56,7 +48,7 @@ public class Customer {
      */
     public int getCustomerID() {
         // TODO Implement required functionality
-    	return this.customerID;
+    	return this.customerID; // Returns the customerID
     }
 
     // Add more methods as you see fit

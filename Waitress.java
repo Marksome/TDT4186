@@ -4,6 +4,7 @@
  */
 public class Waitress implements Runnable {
 	private WaitingArea waitingArea;
+	private Customer customer;
 
     /**
      * Creates a new waitress. Make sure to save the parameter in the class
@@ -22,23 +23,16 @@ public class Waitress implements Runnable {
     @Override
     public void run() {
         // TODO Implement required functionality
-    	while (SushiBar.isOpen || !waitingArea.emptyQueue()) {
-    		if (waitingArea.emptyQueue()) {
-    			try {
-					Thread.currentThread().wait(); // Makes the waitress wait for a notification
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-    		}
-    		Customer customer = waitingArea.next(); // Fetch the next customer
-    		SushiBar.write("Customer" + customer.getCustomerID() + " is now fetched.");
-    		// notify(); // notify producer thread.
+    	while (SushiBar.isOpen || !WaitingArea.emptyQueue()) {
+    		customer = waitingArea.next(); // Fetch the next customer
+    		SushiBar.write(Thread.currentThread().getName() + ": Customer" + customer.getCustomerID() + " is now fetched.");
+        	SushiBar.customers.increment(); // SyncronizedInteger increments customers
     		try {
-				Thread.sleep(SushiBar.waitressWait); // Makes the waitress sleep a set time before taking the customer's order.
+				Thread.sleep(SushiBar.waitressWait); // Makes the waitress sleep a set time before taking the customer's order
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-    		customer.order(); // Waitress is now taking the customers order.
+    		customer.order(); // Waitress is now taking the customer's order
     	}
     }
 }

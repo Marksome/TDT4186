@@ -25,6 +25,7 @@ public class SushiBar {
     public static SynchronizedInteger servedOrders;
     public static SynchronizedInteger takeawayOrders;
     public static SynchronizedInteger totalOrders;
+    public static SynchronizedInteger customers;
 
 
     public static void main(String[] args) {
@@ -35,6 +36,7 @@ public class SushiBar {
         totalOrders = new SynchronizedInteger(0);
         servedOrders = new SynchronizedInteger(0);
         takeawayOrders = new SynchronizedInteger(0);
+        customers = new SynchronizedInteger(0);
 
         // TODO initialize the bar and start the different threads
         WaitingArea waitingArea = new WaitingArea(waitingAreaCapacity);
@@ -56,7 +58,6 @@ public class SushiBar {
             bw.close();
             System.out.println(Clock.getTime() + ", " + str);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

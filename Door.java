@@ -20,23 +20,22 @@ public class Door implements Runnable {
     @Override
     public void run() {
         // TODO Implement required functionality    	
-    	while (SushiBar.isOpen) {
-    		if (waitingArea.roomInQueue()) { // If there is room for a new customer.
-    			SushiBar.customerCounter.increment(); // SyncronizedInteger increments customerCounter
-    			customer = new Customer();	// Creates a new customer
-    	    	SushiBar.write(Thread.currentThread().getName() + ": Customer" + customer.getCustomerID() + " is now created.");
-    	    	waitingArea.enter(customer); // Sends the customer to the waiting area
-    	    	try {
-					Thread.sleep(SushiBar.doorWait); // Makes the door sleep for set time
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-    		}
-    		else {
-
-    		}	    			
+    	while (SushiBar.isOpen) { // Checks to see if the shop is open
+    		SushiBar.customerCounter.increment(); // SyncronizedInteger increments customerCounter
+			customer = new Customer();	// Creates a new customer
+	    	SushiBar.write(Thread.currentThread().getName() + ": Customer" + customer.getCustomerID() + " is now created.");
+	    	waitingArea.enter(customer); // Sends the customer to the waiting area
+	    	try {
+				Thread.sleep(SushiBar.doorWait); // Makes the door sleep for set time
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
     	}
+    	waitingArea.close();
+    	SushiBar.write("***** NO MORE CUSTOMERS - THE SHOP IS CLOSED NOW. *****");
+    	SushiBar.write("Total served orders " + SushiBar.servedOrders.get());
+    	SushiBar.write("Total takeway orders " + SushiBar.takeawayOrders.get());
+    	SushiBar.write("Total orders " + SushiBar.totalOrders.get());
     }
 
     // Add more methods as you see fit

@@ -5,7 +5,7 @@ import java.util.LinkedList;
  */
 public class WaitingArea {
  	private int waitingAreaCapacity;
- 	private LinkedList<Customer> queue;
+ 	private static LinkedList<Customer> queue;
 
     /**
      * Creates a new waiting area.
@@ -26,25 +26,51 @@ public class WaitingArea {
      */
     public synchronized void enter(Customer customer) {
         // TODO Implement required functionality
-    	// SushiBar.customerCounter.increment(); // SyncronizedInteger increments customerCounter
+    	while (!roomInQueue()) { // Checks to see if there is no more room in the queue
+    		try {
+				wait(); // Make the door wait until there is more room in the queue
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+    	}
     	queue.add(customer);
-		// notify(); // notify consumer threads.
-    	SushiBar.write("Customer" + customer.getCustomerID() + " is now waiting.");
+    	SushiBar.customers.increment();
+    	SushiBar.write(Thread.currentThread().getName() + ": Customer" + customer.getCustomerID() + " is now waiting.");
+    	notify(); // Notifies the waitresses that there is a customer in queue
     }
 
     /**
      * @return The customer that is first in line.
      */
     public synchronized Customer next() {
-		// SushiBar.customerCounter.decrement(); // SyncronizedInteger decrements customerCounter
-        return queue.poll();
+        // TODO Implement required functionality
+    	while (emptyQueue()) {
+    		try {
+    	    	SushiBar.write(Thread.currentThread().getName() + " is now waiting.");
+    			wait(); // Makes the waitress wait for a customer to enter the queue
+    		} catch (InterruptedException e) {
+    			e.printStackTrace();
+    		}
+    	}
+    	notify(); // Notifies the door that there is more room in the queue
+        return queue.poll(); // Returns the first element of the LinkedList
+    }
+    
+    public synchronized void close() {
+    	while (SushiBar.customers.get() > 0) { // Checks to see if the shop is empty
+    		try {
+    			wait(); // Makes the door wait until the shop is empty
+    		} catch (InterruptedException e) {
+    			e.printStackTrace();
+    		}
+    	}
     }
     
     public boolean roomInQueue() {
-    	return queue == null || waitingAreaCapacity > queue.size() ? true : false; // Checks if there is room in queue
+    	return queue == null || waitingAreaCapacity > queue.size() ? true : false; // Checks if there is room in the queue
     }
     
-    public boolean emptyQueue() {
+    public static boolean emptyQueue() {
     	return queue.size() == 0 ? true : false; // Checks if the queue is empty
     }
 
